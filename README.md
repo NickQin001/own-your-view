@@ -4,6 +4,8 @@ Examine an idea that resonates with you before you adopt it or act on it.
 
 [中文说明](README.zh-CN.md) · Created by [NickQin001](https://github.com/NickQin001) · [MIT](LICENSE)
 
+Repository: [https://github.com/NickQin001/own-your-view](https://github.com/NickQin001/own-your-view)
+
 Early feedback version **v0.1.1** · 2026-10-14.
 
 ## Why try it?
@@ -14,25 +16,66 @@ The AI can give a counterexample right away. It usually waits for your response 
 
 This project is looking for people with the same use case and for suggestions grounded in actual experience.
 
-## Try it
+## Quick start
 
-Download the ZIP from [v0.1.1](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.1), then extract it. This is a source package, not an automatic installer.
+### Codex: install once, then invoke by name
 
-The single runtime entry is [skills/own-your-view/SKILL.md](skills/own-your-view/SKILL.md). In an AI environment that can read local files, use:
+First review the [v0.1.1 core instructions](https://github.com/NickQin001/own-your-view/blob/v0.1.1/skills/own-your-view/SKILL.md). In your own Codex chat, paste:
 
 ```text
-Read and use skills/own-your-view/SKILL.md.
+$skill-installer
+
+Install the skill I have selected:
+Repository: https://github.com/NickQin001/own-your-view
+Skill directory: skills/own-your-view
+Revision: v0.1.1
+
+Install only this skill in my personal Codex skills location.
+If an installation with the same name already exists, inspect it first;
+do not overwrite it without my approval.
+Do not modify other skills, global instructions, or unrelated settings.
+After installation, verify that its name is own-your-view and explain how to invoke it.
+```
+
+This is a prompt for Codex, not a shell command. You initiate installation on your own device and approve any permissions requested by your environment; sharing this link does not install anything automatically. If `$skill-installer` is unavailable, use the no-install option below.
+
+After installation, use the skill on your next turn:
+
+```text
+$own-your-view
 
 I read that having more productivity tools always makes you more efficient.
 This resonates with me because tools reduce repetitive work.
 Help me examine this idea before suggesting a rewritten view.
 ```
 
-Paths are relative to this repository folder. If your AI cannot read local files, provide the skill's contents together with your request. Native skill installation depends on your tool; an installation command and cross-platform compatibility have not been validated for this release.
+In Codex, type `$` and select `own-your-view`, or look for it in `/skills`. If it does not appear, restart Codex and check again. See [OpenAI's skills documentation](https://learn.chatgpt.com/docs/build-skills) for installation and invocation behavior. Installation and discovery were checked in one Windows Codex setup; compatibility with other environments and automatic selection behavior are not certified.
 
-Instructions are maintained in Chinese in one core file. A model that can understand them should follow the language of your request, or another language you explicitly choose. Four language scenarios have been simulated; this is not a guarantee for every language or model.
+### Other AI chats: try it without installing
 
-You can start with your own paraphrase. A relevant source passage is only needed when the interpretation or a key fact depends on it.
+Download and extract the [v0.1.1 ZIP](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.1). The full prompt is [skills/own-your-view/SKILL.md](skills/own-your-view/SKILL.md); README files explain usage, not the runtime rules. Upload that file to a chat that can read text files, or paste its complete contents, then send:
+
+```text
+Read the complete SKILL.md I provided and follow its instructions.
+If you cannot access the full file, say so before proceeding.
+
+My idea: Having more productivity tools always makes you more efficient.
+Why it resonates with me: Tools reduce repetitive work.
+What I want to examine: When does this claim fail?
+
+Start with one important question or counterexample.
+Do not suggest a rewritten view yet.
+```
+
+Replace the idea, reason, and question with your own. This supplies conversation instructions; it does not install a native skill or make `$own-your-view` available in an ordinary chat. In an environment that can read local files, you can instead ask it to read `skills/own-your-view/SKILL.md`, relative to the extracted repository folder.
+
+Instructions are maintained in Chinese in one core file. A model that can understand them should follow the language of your request, or another language you explicitly choose. English installation and usage examples do not imply a separate English rule set. Four language scenarios have been simulated; this is not a guarantee for every language or model.
+
+You can start with your own paraphrase. A relevant source passage is only needed when the interpretation or a key fact depends on it. Share only the skill file and this repository link with a friend, not your private conversation history.
+
+### Updating an installed copy
+
+The installation prompt pins the runtime to `v0.1.1`. An installed copy does not update when the GitHub README or local source changes. Review a newer version before asking your installer to update it, and preserve any local edits. This documentation update is on `main`; the existing v0.1.1 tag and ZIP retain their original snapshot, with the same core instructions.
 
 ## What a conversation can look like
 
@@ -68,7 +111,9 @@ We want to know where it helped, made thinking harder, gave an irrelevant object
 
 Eight initial model-simulation cases and four later language cases have been reviewed. They came from one reviewing thread in batches, not from independent human participants. Structural and local-file checks passed.
 
-Real-user outcomes, full regression coverage, third-party skill comparisons, and cross-model/install compatibility are still untested. Satisfaction or agreement with AI does not establish improved reasoning.
+One Windows Codex installation was checked: installation completed, the core file matched v0.1.1, structural validation passed, and the skill appeared in the session's available-skills metadata. The visible IDE picker and automatic selection behavior were not independently tested.
+
+Real-user outcomes, full regression coverage, third-party skill comparisons, and cross-model/cross-platform compatibility are still untested. Satisfaction or agreement with AI does not establish improved reasoning.
 
 [Validation record](tests/检查记录.md) · [Test plan](tests/测试方案.md) · [Source acknowledgements](SOURCES.md)
 
