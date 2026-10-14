@@ -1,6 +1,6 @@
 # 首次发布与寻找试用者
 
-更新日期：2026-10-14。公开名称：Own Your View · 想清楚，再相信；项目地址：[NickQin001/own-your-view](https://github.com/NickQin001/own-your-view)。公开仓库已创建，本文介绍发布维护与反馈渠道；具体文件和发行状态以远程页面为准。
+更新日期：2026-10-14。公开名称：Own Your View · 想清楚，再相信；项目地址：[NickQin001/own-your-view](https://github.com/NickQin001/own-your-view)。公开仓库已上传并核验 14 个文件，默认分支 main，MIT 许可证已被 GitHub 识别，Issues 已启用。本文介绍后续发布维护与反馈渠道；具体文件和发行状态以远程页面为准。
 
 ## 先把署名与隐私分开
 

@@ -16,6 +16,8 @@ This project is looking for people with the same use case and for suggestions gr
 
 ## Try it
 
+Download the ZIP from [v0.1.1](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.1), then extract it. This is a source package, not an automatic installer.
+
 The single runtime entry is [skills/own-your-view/SKILL.md](skills/own-your-view/SKILL.md). In an AI environment that can read local files, use:
 
 ```text

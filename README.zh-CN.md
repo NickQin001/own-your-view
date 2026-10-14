@@ -16,6 +16,8 @@
 
 ## 从哪里开始
 
+可从 [v0.1.1 下载页](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.1)下载 ZIP 并解压。这是源码包，不是自动安装程序；如何让 AI 读取核心文件见下方示例。
+
 - [核心指令](skills/own-your-view/SKILL.md)：唯一运行入口；无必需的其他 Skill、脚本或用户档案目录。
 - [反馈说明](FEEDBACK.md)：怎样提供有用且不泄露隐私的反馈。
 - [借鉴记录](SOURCES.md)：哪些机制来自已有项目，哪些设计另作选择。
