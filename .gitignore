@@ -1,0 +1,12 @@
+# Local files that do not belong in the public project
+.env
+.env.*
+*.log
+*.tmp
+*.zip
+__pycache__/
+.DS_Store
+Thumbs.db
+archive/
+HANDOFF.md
+LATEST.md
