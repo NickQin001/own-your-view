@@ -1,4 +1,20 @@
-# v0.1.1 — Early feedback release
+# Release notes
+
+## v0.1.2 — Early feedback release (2026-10-17)
+
+- Preserve the user's conditions and evaluation goal when testing counterexamples; distinguish execution warnings from objections to the stated method.
+- Withdraw inapplicable objections without treating the original claim as proven.
+- Prioritize relevant, verifiable evidence for real-world effects; label hypotheticals and retain evidence gaps.
+- Examine specific objections and revised claims, but do not concede supported facts merely to end disagreement. Stop without requiring agreement.
+- Keep one Chinese runtime core with language-following behavior. Add paired Chinese/English multi-turn simulation inputs and record the actual execution limits in [the review ledger](tests/检查记录.md).
+
+No new runtime dependencies, telemetry, authority to act externally, or automatic updates. Existing v0.1.1 downloads and installations are unchanged.
+
+Validation limits: twelve scripted Chinese/English conversations (36 responses) were generated in one reviewing thread with later inputs visible. Review found residual targeting issues; the final clause about not inventing the user's reasons or success criteria was statically checked but not independently rerun. Real-source retrieval, human outcomes and cross-model equivalence remain untested. This release invites feedback; it is not a claim of complete validation.
+
+中文：本版改良反例适用性、真实证据边界和持续分歧处理。最后一处定向修订尚未独立重测，真实检索与真人效果未验证。旧版保持可下载，已安装的副本不会自动升级。
+
+## v0.1.1 — Early feedback release
 
 Own Your View helps people examine everyday ideas that resonate with them before adopting or acting on them.
 

@@ -6,7 +6,13 @@ Examine an idea that resonates with you before you adopt it or act on it.
 
 Repository: [https://github.com/NickQin001/own-your-view](https://github.com/NickQin001/own-your-view)
 
-Early feedback version **v0.1.1** · 2026-10-14.
+Early feedback version **v0.1.2** · 2026-10-17 · [Release and download](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.2).
+
+### What changes in v0.1.2?
+
+Counterexamples must preserve the conditions and goal you actually stated. Failing to carry out your method is an execution warning, not automatically evidence against it. If an objection misses your claim, the AI should withdraw it without declaring your whole claim proven.
+
+For real-world effects, relevant verifiable evidence takes priority; a hypothetical example is labelled and cannot establish how often something happens. With disagreement, specific objections and revised claims receive fresh consideration. Repeated denial alone does not make a supported correction false, and the conversation may end without agreement.
 
 ## Why try it?
 
@@ -20,7 +26,7 @@ This project is looking for people with the same use case and for suggestions gr
 
 ### Codex: install once, then invoke by name
 
-First review the [v0.1.1 core instructions](https://github.com/NickQin001/own-your-view/blob/v0.1.1/skills/own-your-view/SKILL.md). In your own Codex chat, paste:
+First review the [v0.1.2 core instructions](https://github.com/NickQin001/own-your-view/blob/v0.1.2/skills/own-your-view/SKILL.md). In your own Codex chat, paste:
 
 ```text
 $skill-installer
@@ -28,7 +34,7 @@ $skill-installer
 Install the skill I have selected:
 Repository: https://github.com/NickQin001/own-your-view
 Skill directory: skills/own-your-view
-Revision: v0.1.1
+Revision: v0.1.2
 
 Install only this skill in my personal Codex skills location.
 If an installation with the same name already exists, inspect it first;
@@ -53,7 +59,7 @@ In Codex, type `$` and select `own-your-view`, or look for it in `/skills`. If i
 
 ### Other AI chats: try it without installing
 
-Download and extract the [v0.1.1 ZIP](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.1). The full prompt is [skills/own-your-view/SKILL.md](skills/own-your-view/SKILL.md); README files explain usage, not the runtime rules. Upload that file to a chat that can read text files, or paste its complete contents, then send:
+Download and extract `own-your-view-v0.1.2.zip` from the [v0.1.2 release](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.2). The full prompt is [skills/own-your-view/SKILL.md](skills/own-your-view/SKILL.md); README files explain usage, not the runtime rules. Upload that file to a chat that can read text files, or paste its complete contents, then send:
 
 ```text
 Read the complete SKILL.md I provided and follow its instructions.
@@ -69,13 +75,13 @@ Do not suggest a rewritten view yet.
 
 Replace the idea, reason, and question with your own. This supplies conversation instructions; it does not install a native skill or make `$own-your-view` available in an ordinary chat. In an environment that can read local files, you can instead ask it to read `skills/own-your-view/SKILL.md`, relative to the extracted repository folder.
 
-Instructions are maintained in Chinese in one core file. A model that can understand them should follow the language of your request, or another language you explicitly choose. English installation and usage examples do not imply a separate English rule set. Four language scenarios have been simulated; this is not a guarantee for every language or model.
+Instructions are maintained in Chinese in one core file. A model that can understand them should follow the language of your request, or another language you explicitly choose. English installation and usage examples do not imply a separate English rule set. Chinese-only source instructions can be harder for English-only readers to audit; the English summary here is not a full translation. A translated explanation can help you inspect them, but should not silently replace the core. Correct reply language alone does not establish correct reasoning, cultural fit, or equivalent behavior across models. See the [validation record](tests/检查记录.md) for tested behavior and limitations.
 
 You can start with your own paraphrase. A relevant source passage is only needed when the interpretation or a key fact depends on it. Share only the skill file and this repository link with a friend, not your private conversation history.
 
 ### Updating an installed copy
 
-The installation prompt pins the runtime to `v0.1.1`. An installed copy does not update when the GitHub README or local source changes. Review a newer version before asking your installer to update it, and preserve any local edits. This documentation update is on `main`; the existing v0.1.1 tag and ZIP retain their original snapshot, with the same core instructions.
+The installation prompt pins the runtime to `v0.1.2`. An installed copy does not update when GitHub or local source changes. If you already installed v0.1.1, explicitly ask your installer to update only `own-your-view` to v0.1.2 after reviewing the changes; back up and preserve local edits before approving replacement. The v0.1.1 tag and ZIP remain available as the original snapshot.
 
 ## What a conversation can look like
 
@@ -109,7 +115,7 @@ We want to know where it helped, made thinking harder, gave an irrelevant object
 
 ## Current evidence
 
-Eight initial model-simulation cases and four later language cases have been reviewed. They came from one reviewing thread in batches, not from independent human participants. Structural and local-file checks passed.
+Historical v0.1.1 checks reviewed eight initial model-simulation cases and four later language cases. For v0.1.2, twelve scripted Chinese/English conversations produced 36 responses in one reviewing thread. This was not isolated, turn-by-turn testing: later inputs were visible. Review found residual targeting issues; a final instruction was tightened but not independently rerun. Real-source retrieval, human outcomes and cross-model equivalence remain untested. See the [inputs](tests/20261017_多轮测试输入.md), [raw responses](tests/20261017_多轮模拟记录.md) and [validation record](tests/检查记录.md). This remains an early feedback release, not a fully validated reasoning tool.
 
 One Windows Codex installation was checked: installation completed, the core file matched v0.1.1, structural validation passed, and the skill appeared in the session's available-skills metadata. The visible IDE picker and automatic selection behavior were not independently tested.
 
