@@ -14,6 +14,10 @@ Counterexamples must preserve the conditions and goal you actually stated. Faili
 
 For real-world effects, relevant verifiable evidence takes priority; a hypothetical example is labelled and cannot establish how often something happens. With disagreement, specific objections and revised claims receive fresh consideration. Repeated denial alone does not make a supported correction false, and the conversation may end without agreement.
 
+### Optional consensus library
+
+Current source, described in the [v0.1.3 notes](RELEASE_NOTES.md), can ask after a normal close whether to save the current judgment in one JSON file, `views/consensus.json`, in your own workspace. Nothing is written unless you explicitly confirm. This repository only includes an empty template and a fictional example under [templates/](templates/README.md). The v0.1.2 release linked above is unchanged, and an installed copy does not upgrade on its own.
+
 ## Why try it?
 
 A quote, book, or interview can feel convincing before its assumptions are clear. Own Your View helps you inspect your reasons, consider counterexamples, and decide what to keep, change, or leave open.
@@ -102,8 +106,9 @@ That challenges “always” while preserving the possible value of reducing rep
 - Suggested rewrites normally offered after you respond, or earlier when you explicitly request one.
 - A provisional conclusion that may retain uncertainty and disagreement.
 - Where appropriate, one optional, low-cost way to test the idea further. Simple explanation or formatting requests do not receive extra homework.
+- An optional local consensus file only after you confirm a write. Empty and example JSON are in [templates/views/](templates/views/); this repository does not store real consensus.
 
-The skill is intended for everyday ideas and reading reflections. It is not a professional decision tool. The host determines available tools and how chat data is stored; the skill itself adds no telemetry, automatic feedback submission, or personal profile.
+The skill is intended for everyday ideas and reading reflections. It is not a professional decision tool. The host determines available tools and how chat data is stored; the skill itself adds no telemetry, automatic feedback submission, or personal profile. A consensus file is written only after you confirm, and only in the location you agreed to.
 
 ## Help improve it
 
