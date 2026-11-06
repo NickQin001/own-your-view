@@ -1,5 +1,25 @@
 # 首次发布与寻找试用者
 
+## 2026-11-06 · SkillHub 0.1.3 准备（未提交）
+
+GitHub 早期试用版已发布：[v0.1.3](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.3)，源码包是 `own-your-view-v0.1.3.zip`。**GitHub Release 不等于 SkillHub 已更新**，也不会自动升级已安装副本。本次只准备上传包。没有代为登录 SkillHub，没有提交，没有审核回执，不声称已上架或处于审核中。
+
+请同事在完成手机号登录和实名认证后，自行打开 [SkillHub 发布页](https://skillhub.cn/dashboard/publish) 上传。不要复用 `own-your-view-skillhub-0.1.1.zip`，也不要使用任何 0.1.2 SkillHub 包。先在已有 `own-your-view` 条目里找更新入口，不要另建同名条目。
+
+上传文件名：`own-your-view-skillhub-0.1.3.zip`。它挂在上述 GitHub Release 上，供上传者下载核对；与源码包不是同一个文件，也被 `.gitignore` 的 `*.zip` 排除，不进仓库。ZIP SHA256：`41067685ade3dd2ae104717477408d70836dbbb121dbc029e9701ecdb6c502ee`。
+
+根目录只有这三件，没有子目录：
+
+| 文件 | 字节 | SHA256 | 内容 |
+| --- | ---: | --- | --- |
+| `SKILL.md` | 13852 | `550880c4af7ec4e03426a885c5a91a6cee744d9c2c5a39bf1bb5640f84fa55a5` | 正文与标签 `v0.1.3` 的 `skills/own-your-view/SKILL.md` 相同。front matter 另加 `slug: own-your-view`、`version: 0.1.3`、`displayName: "Own Your View · 想清楚，再相信"`、`license: MIT`、`homepage: https://github.com/NickQin001/own-your-view`。仓库里的核心文件没有这些平台字段。 |
+| `LICENSE` | 1067 | `11c13de38f4ad9ac80e9cf358f11e2baa23a15dd0a343cf2358bb577abfbbff5` | 与仓库 MIT `LICENSE` 相同 |
+| `README.md` | 1237 | `ffe36c59fd8c12a03806cc14c5425d6ea2ccb81417f6ae24c73bd86040801c37` | 本上传包的短说明，不是仓库首页 README |
+
+表单按提交页实际字段填写；准备值为：显示名 `Own Your View · 想清楚，再相信`，slug `own-your-view`，版本 `0.1.3`，许可证 MIT，主页 `https://github.com/NickQin001/own-your-view`。分类是否可选以页面为准。
+
+下方 2026-10-17 与 2026-10-16 段落是旧版记录。不要用那些 ZIP、版本号或 SHA256 提交 0.1.3。
+
 2026-10-17 版本说明：本包对应 v0.1.2 早期试用版，[GitHub 版本页](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.2)提供源码与下载。旧 v0.1.1 标签和下载包保留，不包含本次核心修订。验证范围及未覆盖项见 [检查账本](tests/检查记录.md)。GitHub 发布不等于 SkillHub 已更新，也不会自动升级个人安装副本。
 
 SkillHub 下列 2026-10-16 段落是 v0.1.1 准备记录，不要用旧 ZIP 提交新版。若从 GitHub 导入，请选本仓库的 `skills/own-your-view`，核对版本填写为 `0.1.2` 且内容含本次三项改良；平台是否重新抓取源码需在提交页核实。本项目未收到平台提交或审核回执，不声称已更新 SkillHub。不要重复创建同名条目，先在自己的已有条目中检查更新入口。
