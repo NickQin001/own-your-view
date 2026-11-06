@@ -6,17 +6,17 @@ Examine an idea that resonates with you before you adopt it or act on it.
 
 Repository: [https://github.com/NickQin001/own-your-view](https://github.com/NickQin001/own-your-view)
 
-Early feedback version **v0.1.2** · 2026-10-17 · [Release and download](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.2).
+Early feedback version **v0.1.3** · 2026-11-06 · [Release and download](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.3).
+
+### What changes in v0.1.3?
+
+After a normal close, the skill can ask whether to save the current judgment in one JSON file, `views/consensus.json`, in your own workspace. Nothing is written unless you explicitly confirm. This repository only includes an empty template and a fictional example under [templates/](templates/README.md). Counterexample and disagreement rules from v0.1.2 are unchanged. No new scripted simulation was run for v0.1.3. An installed copy does not upgrade on its own. Details are in the [release notes](RELEASE_NOTES.md).
 
 ### What changes in v0.1.2?
 
 Counterexamples must preserve the conditions and goal you actually stated. Failing to carry out your method is an execution warning, not automatically evidence against it. If an objection misses your claim, the AI should withdraw it without declaring your whole claim proven.
 
 For real-world effects, relevant verifiable evidence takes priority; a hypothetical example is labelled and cannot establish how often something happens. With disagreement, specific objections and revised claims receive fresh consideration. Repeated denial alone does not make a supported correction false, and the conversation may end without agreement.
-
-### Optional consensus library
-
-Current source, described in the [v0.1.3 notes](RELEASE_NOTES.md), can ask after a normal close whether to save the current judgment in one JSON file, `views/consensus.json`, in your own workspace. Nothing is written unless you explicitly confirm. This repository only includes an empty template and a fictional example under [templates/](templates/README.md). The v0.1.2 release linked above is unchanged, and an installed copy does not upgrade on its own.
 
 ## Why try it?
 
@@ -30,7 +30,7 @@ This project is looking for people with the same use case and for suggestions gr
 
 ### Codex: install once, then invoke by name
 
-First review the [v0.1.2 core instructions](https://github.com/NickQin001/own-your-view/blob/v0.1.2/skills/own-your-view/SKILL.md). In your own Codex chat, paste:
+First review the [v0.1.3 core instructions](https://github.com/NickQin001/own-your-view/blob/v0.1.3/skills/own-your-view/SKILL.md). In your own Codex chat, paste:
 
 ```text
 $skill-installer
@@ -38,7 +38,7 @@ $skill-installer
 Install the skill I have selected:
 Repository: https://github.com/NickQin001/own-your-view
 Skill directory: skills/own-your-view
-Revision: v0.1.2
+Revision: v0.1.3
 
 Install only this skill in my personal Codex skills location.
 If an installation with the same name already exists, inspect it first;
@@ -63,7 +63,7 @@ In Codex, type `$` and select `own-your-view`, or look for it in `/skills`. If i
 
 ### Other AI chats: try it without installing
 
-Download and extract `own-your-view-v0.1.2.zip` from the [v0.1.2 release](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.2). The full prompt is [skills/own-your-view/SKILL.md](skills/own-your-view/SKILL.md); README files explain usage, not the runtime rules. Upload that file to a chat that can read text files, or paste its complete contents, then send:
+Download and extract `own-your-view-v0.1.3.zip` from the [v0.1.3 release](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.3). The full prompt is [skills/own-your-view/SKILL.md](skills/own-your-view/SKILL.md); README files explain usage, not the runtime rules. Upload that file to a chat that can read text files, or paste its complete contents, then send:
 
 ```text
 Read the complete SKILL.md I provided and follow its instructions.
@@ -85,7 +85,7 @@ You can start with your own paraphrase. A relevant source passage is only needed
 
 ### Updating an installed copy
 
-The installation prompt pins the runtime to `v0.1.2`. An installed copy does not update when GitHub or local source changes. If you already installed v0.1.1, explicitly ask your installer to update only `own-your-view` to v0.1.2 after reviewing the changes; back up and preserve local edits before approving replacement. The v0.1.1 tag and ZIP remain available as the original snapshot.
+The installation prompt pins the runtime to `v0.1.3`. An installed copy does not update when GitHub or local source changes. If you already installed v0.1.2 or v0.1.1, explicitly ask your installer to update only `own-your-view` to v0.1.3 after reviewing the changes; back up and preserve local edits before approving replacement. The v0.1.2 and v0.1.1 tags and ZIPs remain available.
 
 ## What a conversation can look like
 
@@ -120,7 +120,7 @@ We want to know where it helped, made thinking harder, gave an irrelevant object
 
 ## Current evidence
 
-Historical v0.1.1 checks reviewed eight initial model-simulation cases and four later language cases. For v0.1.2, twelve scripted Chinese/English conversations produced 36 responses in one reviewing thread. This was not isolated, turn-by-turn testing: later inputs were visible. Review found residual targeting issues; a final instruction was tightened but not independently rerun. Real-source retrieval, human outcomes and cross-model equivalence remain untested. See the [inputs](tests/20261017_多轮测试输入.md), [raw responses](tests/20261017_多轮模拟记录.md) and [validation record](tests/检查记录.md). This remains an early feedback release, not a fully validated reasoning tool.
+Historical v0.1.1 checks reviewed eight initial model-simulation cases and four later language cases. For v0.1.2, twelve scripted Chinese/English conversations produced 36 responses in one reviewing thread. This was not isolated, turn-by-turn testing: later inputs were visible. Review found residual targeting issues; a final instruction was tightened but not independently rerun. v0.1.3 adds the optional consensus library and did not run a new simulation round. Real-source retrieval, human outcomes and cross-model equivalence remain untested. See the [inputs](tests/20261017_多轮测试输入.md), [raw responses](tests/20261017_多轮模拟记录.md) and [validation record](tests/检查记录.md). This remains an early feedback release, not a fully validated reasoning tool.
 
 One Windows Codex installation was checked: installation completed, the core file matched v0.1.1, structural validation passed, and the skill appeared in the session's available-skills metadata. The visible IDE picker and automatic selection behavior were not independently tested.
 

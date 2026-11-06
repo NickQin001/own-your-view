@@ -4,15 +4,13 @@
 
 仓库地址：[https://github.com/NickQin001/own-your-view](https://github.com/NickQin001/own-your-view)
 
-早期试用版 **v0.1.2** · 2026-10-17 · [新版下载与说明](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.2)。发布不会自动更新已经安装的副本。
+早期试用版 **v0.1.3** · 2026-11-06 · [新版下载与说明](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.3)。发布不会自动更新已经安装的副本。
 
-本版改良三点：反例保留原主张的条件和目标，不把执行走样冒充反例；现实效果优先核验真实且适用的证据，假设不代替发生频率；遇到异议先检查具体理由，既不维护 AI 的错误反驳，也不因用户重复否认就附和。
+v0.1.3 在既有规则上增加可选共识观点库：推敲正常收尾后，仅在你明确确认时，把「现行判断」写入自己工作区的 `views/consensus.json`。公开仓库只提供空模板和虚构示例，见 [templates/](templates/README.md)。本版没有新的脚本化模拟。详见 [发行说明](RELEASE_NOTES.md)。
 
-本次完成中英文 12 段、36 个回复的脚本化模拟，不是隔离逐轮测试。发现反例针对性问题后补充的一处规则尚未独立重测；真实来源检索、真人效果和跨模型表现仍待验证。详见[检查记录](tests/检查记录.md)，不以发布替代效果证明。
+v0.1.2 仍有效的改良：反例保留原主张的条件和目标，不把执行走样冒充反例；现实效果优先核验真实且适用的证据，假设不代替发生频率；遇到异议先检查具体理由，既不维护 AI 的错误反驳，也不因用户重复否认就附和。
 
-### 可选共识观点库
-
-当前源码（见 [v0.1.3 发行说明](RELEASE_NOTES.md)）可在推敲正常收尾后询问，是否把「现行判断」写入你自己工作区里的单一 JSON 文件 `views/consensus.json`。未经明确确认不会写入。公开仓库只提供空模板和虚构示例，见 [templates/](templates/README.md)。上方 v0.1.2 下载链接不变，已安装副本不会自动升级。
+v0.1.2 完成了中英文 12 段、36 个回复的脚本化模拟，不是隔离逐轮测试。发现反例针对性问题后补充的一处规则尚未独立重测；真实来源检索、真人效果和跨模型表现仍待验证。v0.1.3 未重跑该模拟。详见[检查记录](tests/检查记录.md)，不以发布替代效果证明。
 
 听到一句很有道理的话之后，我们可能愿意相信它，甚至照着做。这个 Skill 希望在两者之间留一点空间：检查依据、看看反例，再决定哪些部分值得保留。
 
@@ -22,13 +20,13 @@
 
 希望找到也有“共鸣之后想再检查一次”需求的人，通过实际使用的问题和建议一起改进。发布意图是邀请试用与讨论，不是宣称方法成熟或学习效果已经被证明。
 
-本项目采用 MIT 许可证，允许使用、修改、再分发和商业使用，要求保留版权与许可声明。项目由 NickQin001 发起，使用 AI 辅助起草与检查。v0.1.1 在一个 Windows Codex 环境的安装与技能发现已检查；不等于 v0.1.2 已安装验证，尚无跨平台兼容或真实用户效果验证。
+本项目采用 MIT 许可证，允许使用、修改、再分发和商业使用，要求保留版权与许可声明。项目由 NickQin001 发起，使用 AI 辅助起草与检查。v0.1.1 在一个 Windows Codex 环境的安装与技能发现已检查；不等于 v0.1.2 或 v0.1.3 已安装验证，尚无跨平台兼容或真实用户效果验证。
 
 ## 快速开始
 
 ### Codex 用户：安装一次，以后按名称调用
 
-先查看 [v0.1.2 核心指令](https://github.com/NickQin001/own-your-view/blob/v0.1.2/skills/own-your-view/SKILL.md)。在你自己的 Codex 对话框复制下面这段：
+先查看 [v0.1.3 核心指令](https://github.com/NickQin001/own-your-view/blob/v0.1.3/skills/own-your-view/SKILL.md)。在你自己的 Codex 对话框复制下面这段：
 
 ```text
 $skill-installer
@@ -36,7 +34,7 @@ $skill-installer
 请安装我选择的 Skill：
 仓库：https://github.com/NickQin001/own-your-view
 技能目录：skills/own-your-view
-版本：v0.1.2
+版本：v0.1.3
 
 只将这个技能安装到我的 Codex 个人技能目录。
 若已有同名安装，先检查，未经我同意不要覆盖。
@@ -60,7 +58,7 @@ $own-your-view
 
 ### 普通 AI 对话：先免安装试用
 
-从 [v0.1.2 下载页](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.2)下载 `own-your-view-v0.1.2.zip` 并解压。完整提示词在 [skills/own-your-view/SKILL.md](skills/own-your-view/SKILL.md)，不是 README。把这个文件上传给能读取文本文件的 AI，或粘贴其完整内容，再发送：
+从 [v0.1.3 下载页](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.3)下载 `own-your-view-v0.1.3.zip` 并解压。完整提示词在 [skills/own-your-view/SKILL.md](skills/own-your-view/SKILL.md)，不是 README。把这个文件上传给能读取文本文件的 AI，或粘贴其完整内容，再发送：
 
 ```text
 请完整读取我提供的 SKILL.md，并按照其中的规则帮我推敲观点。
@@ -81,7 +79,7 @@ $own-your-view
 
 ### 已安装副本怎样更新
 
-上述提示固定安装 `v0.1.2`。GitHub 或本地源稿变化，不会自动更新已安装副本。若已安装 v0.1.1，请审阅新版后明确要求安装器仅更新 `own-your-view` 到 v0.1.2，先备份、检查并保留自己的本地修改，再批准替换。旧 v0.1.1 标签和 ZIP 保留原始快照。
+上述提示固定安装 `v0.1.3`。GitHub 或本地源稿变化，不会自动更新已安装副本。若已安装 v0.1.2 或 v0.1.1，请审阅新版后明确要求安装器仅更新 `own-your-view` 到 v0.1.3，先备份、检查并保留自己的本地修改，再批准替换。旧 v0.1.2 与 v0.1.1 标签和 ZIP 保留。
 
 ## 更多说明
 
