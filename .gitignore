@@ -11,3 +11,6 @@ Thumbs.db
 archive/
 HANDOFF.md
 LATEST.md
+
+# Personal path configuration and library (if home is this checkout)
+/.own-your-view/

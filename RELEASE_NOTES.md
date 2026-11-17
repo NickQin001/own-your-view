@@ -1,5 +1,13 @@
 # Release notes
 
+## v0.1.5 — One personal library across workspaces (2026-11-17)
+
+- Store a verified absolute library path in `.own-your-view/config.json` under the actual user home on first use. Workspaces sharing that home reuse the same library. This is a skill-defined file convention, not a native host setting or device-sync service.
+- Reuse an explicit existing location or the current workspace's legacy library without moving its contents. Otherwise select `.own-your-view/consensus.json` under the user home. Configuration initialization does not create the library or save a judgment.
+- Require explicit confirmation for library writes and read back the result. Report inaccessible or invalid configuration instead of creating a fallback library. Keep scope checks when applying a judgment in another project.
+- No automatic scanning, merging, migration or cross-device synchronization. Personal configuration and real judgments are excluded from public packages. The entry schema is unchanged.
+- v0.1.4 dialogue observations remain historical evidence, not a new multi-model result. See the [v0.1.5 validation record](tests/20261117_个人共享库验收.md) for this release's actual checks and limits.
+
 ## v0.1.4 — Structured replies and a fixed workspace library (2026-11-17)
 
 - Reflection uses ordered, optional sections: current understanding, key check, and one question. Omit sections that add no substance; direct answers, closing summaries, listings and save results follow their own request types. Explicit format requests remain supported.
