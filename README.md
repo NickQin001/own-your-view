@@ -4,134 +4,43 @@ Examine an idea that resonates with you before you adopt it or act on it.
 
 [中文说明](README.zh-CN.md) · Created by [NickQin001](https://github.com/NickQin001) · [MIT](LICENSE)
 
-Repository: [https://github.com/NickQin001/own-your-view](https://github.com/NickQin001/own-your-view)
+Early feedback version **v0.1.4** · 2026-11-17 · [Release and downloads](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.4)
 
-Early feedback version **v0.1.3** · 2026-11-06 · [Release and download](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.3).
+## What changed
 
-### What changes in v0.1.3?
+- Reflection uses **Current understanding → Key check → One question**, showing a section only when it adds substantive content. In Chinese, the labels are **本轮理解 / 关键检验 / 一个问题**.
+- Direct answers, summaries, library listings and save confirmations follow the request instead of repeating a review template. Explicit format requests are respected.
+- The default library stays at the workspace root when entering subdirectories. Normal listings show actual entries; concrete path or read errors are reported.
+- Create and write only after explicit confirmation, then read back to verify the result and retained entries.
 
-After a normal close, the skill can ask whether to save the current judgment in one JSON file, `views/consensus.json`, in your own workspace. Nothing is written unless you explicitly confirm. This repository only includes an empty template and a fictional example under [templates/](templates/README.md). Counterexample and disagreement rules from v0.1.2 are unchanged. No new scripted simulation was run for v0.1.3. An installed copy does not upgrade on its own. Details are in the [release notes](RELEASE_NOTES.md).
+Evidence checks, counterexamples, alternative explanations and uncertainty remain essential. Agreement with the AI is not proof; the assistant does not decide for you.
 
-### What changes in v0.1.2?
+## Try it
 
-Counterexamples must preserve the conditions and goal you actually stated. Failing to carry out your method is an execution warning, not automatically evidence against it. If an objection misses your claim, the AI should withdraw it without declaring your whole claim proven.
+For a compatible skill host, follow its installation process using [skills/own-your-view](https://github.com/NickQin001/own-your-view/tree/v0.1.4/skills/own-your-view). The release page has a full repository ZIP and a separate SkillHub upload ZIP.
 
-For real-world effects, relevant verifiable evidence takes priority; a hypothetical example is labelled and cannot establish how often something happens. With disagreement, specific objections and revised claims receive fresh consideration. Repeated denial alone does not make a supported correction false, and the conversation may end without agreement.
+For a file-reading assistant, extract the repository and ask it to read `skills/own-your-view/SKILL.md`, then provide your idea. You can also supply the complete file in a chat. File reading is not proof of native skill registration; a text-only chat may not have persistent file access.
 
-## Why try it?
+> Please use own-your-view to examine “More tools always make work more efficient.” My reason is that each tool saves a little effort. Focus on the most important issue first.
 
-A quote, book, or interview can feel convincing before its assumptions are clear. Own Your View helps you inspect your reasons, consider counterexamples, and decide what to keep, change, or leave open.
+If your host supports the skill selector, invoke `$own-your-view`. Installed copies do not automatically follow repository updates.
 
-The AI can give a counterexample right away. It usually waits for your response before suggesting a rewritten view. You can challenge its reasoning, ask for a direct answer, keep your original view, or stop.
+## Conversation and storage
 
-This project is looking for people with the same use case and for suggestions grounded in actual experience.
+The assistant responds to new information, checks the key issue, and asks one useful question when needed. It can withdraw an invalid counterexample, preserve disagreement or close a round without forcing a conclusion. If you ask it to stop, it stops.
 
-## Quick start
+After a normal close, you may explicitly confirm saving a current judgment. The default is `views/consensus.json` at the workspace root. Entering a subdirectory does not create another library. Separate workspaces use separate libraries unless you specify another location. Installation or viewing does not create a library.
 
-### Codex: install once, then invoke by name
+Entries preserve the claim, scope, key counterexample and response, conditions for reconsideration, date and `updated_at`. They are revisable judgments, not established truths. Only empty and fictional examples are included in [templates](templates/README.md).
 
-First review the [v0.1.3 core instructions](https://github.com/NickQin001/own-your-view/blob/v0.1.3/skills/own-your-view/SKILL.md). In your own Codex chat, paste:
+A personal host rule requiring six-part reports needs a user-authorized exception to use this presentation. The skill does not override host instructions, modify global settings or synchronize private libraries on its own.
 
-```text
-$skill-installer
+## Validation and limits
 
-Install the skill I have selected:
-Repository: https://github.com/NickQin001/own-your-view
-Skill directory: skills/own-your-view
-Revision: v0.1.3
+One new reviewer thread produced nine fictional dialogue responses and eight isolated file-operation examples for v0.1.4. Stored responses and file results were reviewed, including missing/corrupt files, no write before confirmation, append with old-entry preservation and first-write readback.
 
-Install only this skill in my personal Codex skills location.
-If an installation with the same name already exists, inspect it first;
-do not overwrite it without my approval.
-Do not modify other skills, global instructions, or unrelated settings.
-After installation, verify that its name is own-your-view and explain how to invoke it.
-```
+These were batch scenarios with all inputs visible. File actions were orchestrated by case ID. This supports the observed outputs and artifacts, not general intent recognition, automatic skill selection, independent per-case conversations, cross-model equivalence or long-term learning outcomes. See the [validation summary](tests/20261116_呈现与观点库验收.md) and [release notes](RELEASE_NOTES.md).
 
-This is a prompt for Codex, not a shell command. You initiate installation on your own device and approve any permissions requested by your environment; sharing this link does not install anything automatically. If `$skill-installer` is unavailable, use the no-install option below.
+This is a reflection aid for everyday ideas, not professional advice. Tools and chat retention depend on the host. The skill adds no telemetry or automatic feedback submission; private judgments are not uploaded to this repository.
 
-After installation, use the skill on your next turn:
-
-```text
-$own-your-view
-
-I read that having more productivity tools always makes you more efficient.
-This resonates with me because tools reduce repetitive work.
-Help me examine this idea before suggesting a rewritten view.
-```
-
-In Codex, type `$` and select `own-your-view`, or look for it in `/skills`. If it does not appear, restart Codex and check again. See [OpenAI's skills documentation](https://learn.chatgpt.com/docs/build-skills) for installation and invocation behavior. Installation and discovery were checked in one Windows Codex setup; compatibility with other environments and automatic selection behavior are not certified.
-
-### Other AI chats: try it without installing
-
-Download and extract `own-your-view-v0.1.3.zip` from the [v0.1.3 release](https://github.com/NickQin001/own-your-view/releases/tag/v0.1.3). The full prompt is [skills/own-your-view/SKILL.md](skills/own-your-view/SKILL.md); README files explain usage, not the runtime rules. Upload that file to a chat that can read text files, or paste its complete contents, then send:
-
-```text
-Read the complete SKILL.md I provided and follow its instructions.
-If you cannot access the full file, say so before proceeding.
-
-My idea: Having more productivity tools always makes you more efficient.
-Why it resonates with me: Tools reduce repetitive work.
-What I want to examine: When does this claim fail?
-
-Start with one important question or counterexample.
-Do not suggest a rewritten view yet.
-```
-
-Replace the idea, reason, and question with your own. This supplies conversation instructions; it does not install a native skill or make `$own-your-view` available in an ordinary chat. In an environment that can read local files, you can instead ask it to read `skills/own-your-view/SKILL.md`, relative to the extracted repository folder.
-
-Instructions are maintained in Chinese in one core file. A model that can understand them should follow the language of your request, or another language you explicitly choose. English installation and usage examples do not imply a separate English rule set. Chinese-only source instructions can be harder for English-only readers to audit; the English summary here is not a full translation. A translated explanation can help you inspect them, but should not silently replace the core. Correct reply language alone does not establish correct reasoning, cultural fit, or equivalent behavior across models. See the [validation record](tests/检查记录.md) for tested behavior and limitations.
-
-You can start with your own paraphrase. A relevant source passage is only needed when the interpretation or a key fact depends on it. Share only the skill file and this repository link with a friend, not your private conversation history.
-
-### Updating an installed copy
-
-The installation prompt pins the runtime to `v0.1.3`. An installed copy does not update when GitHub or local source changes. If you already installed v0.1.2 or v0.1.1, explicitly ask your installer to update only `own-your-view` to v0.1.3 after reviewing the changes; back up and preserve local edits before approving replacement. The v0.1.2 and v0.1.1 tags and ZIPs remain available.
-
-## What a conversation can look like
-
-A hypothetical counterexample from a model simulation:
-
-> You add a second task manager, then spend more time copying updates between the two than you save through its automation.
-
-The next question invites your judgment:
-
-> How does that example affect your view—which part would you keep, revise, or remain unsure about?
-
-That challenges “always” while preserving the possible value of reducing repetitive work. The full simulated inputs and outputs are available in [the validation records](tests/模拟记录.md).
-
-## What to expect
-
-- Usually one focused question at a time, with relevant counterexamples and space for your own judgment.
-- Key facts checked when the host provides browsing and permission; unknowns stay explicit.
-- Suggested rewrites normally offered after you respond, or earlier when you explicitly request one.
-- A provisional conclusion that may retain uncertainty and disagreement.
-- Where appropriate, one optional, low-cost way to test the idea further. Simple explanation or formatting requests do not receive extra homework.
-- An optional local consensus file only after you confirm a write. Empty and example JSON are in [templates/views/](templates/views/); this repository does not store real consensus.
-
-The skill is intended for everyday ideas and reading reflections. It is not a professional decision tool. The host determines available tools and how chat data is stored; the skill itself adds no telemetry, automatic feedback submission, or personal profile. A consensus file is written only after you confirm, and only in the location you agreed to.
-
-## Help improve it
-
-[Feedback prompts in English](FEEDBACK.en.md) · [中文反馈](FEEDBACK.md)
-
-Share feedback through [Issues](https://github.com/NickQin001/own-your-view/issues) using [the bilingual template](.github/ISSUE_TEMPLATE/feedback.md). Suggestions from people who have not tried it are welcome when labelled as such. Pull requests with a small, explained change are also welcome.
-
-We want to know where it helped, made thinking harder, gave an irrelevant objection, rewrote your view too early, or failed to stop. A short anonymized excerpt or a made-up example is enough.
-
-## Current evidence
-
-Historical v0.1.1 checks reviewed eight initial model-simulation cases and four later language cases. For v0.1.2, twelve scripted Chinese/English conversations produced 36 responses in one reviewing thread. This was not isolated, turn-by-turn testing: later inputs were visible. Review found residual targeting issues; a final instruction was tightened but not independently rerun. v0.1.3 adds the optional consensus library and did not run a new simulation round. Real-source retrieval, human outcomes and cross-model equivalence remain untested. See the [inputs](tests/20261017_多轮测试输入.md), [raw responses](tests/20261017_多轮模拟记录.md) and [validation record](tests/检查记录.md). This remains an early feedback release, not a fully validated reasoning tool.
-
-One Windows Codex installation was checked: installation completed, the core file matched v0.1.1, structural validation passed, and the skill appeared in the session's available-skills metadata. The visible IDE picker and automatic selection behavior were not independently tested.
-
-Real-user outcomes, full regression coverage, third-party skill comparisons, and cross-model/cross-platform compatibility are still untested. Satisfaction or agreement with AI does not establish improved reasoning.
-
-[Validation record](tests/检查记录.md) · [Test plan](tests/测试方案.md) · [Source acknowledgements](SOURCES.md)
-
-## Authorship and license
-
-Created by NickQin001 with AI assistance in drafting and review. Inspired by mechanisms in existing Socratic-dialogue and argument-review skills, acknowledged in SOURCES.md; this project does not claim those general ideas as its invention.
-
-MIT permits use, modification, redistribution, and commercial use, with the copyright and license notices retained in copies or substantial portions. It does not require prominent advertising of the original author or that all changes be contributed back.
-
-[Release notes](RELEASE_NOTES.md) · [中文发布与隐私说明](PUBLISHING.zh-CN.md)
+Specific, de-identified feedback is welcome through [Issues](https://github.com/NickQin001/own-your-view/issues). See [feedback guidance](FEEDBACK.en.md), [sources](SOURCES.md) and [MIT license](LICENSE). Preserve the license and attribution when reusing the work.

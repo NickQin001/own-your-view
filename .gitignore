@@ -1,4 +1,5 @@
 # Local files that do not belong in the public project
+/views/consensus.json
 .env
 .env.*
 *.log

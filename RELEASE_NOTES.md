@@ -1,8 +1,15 @@
 # Release notes
 
+## v0.1.4 — Structured replies and a fixed workspace library (2026-11-17)
+
+- Reflection uses ordered, optional sections: current understanding, key check, and one question. Omit sections that add no substance; direct answers, closing summaries, listings and save results follow their own request types. Explicit format requests remain supported.
+- Keep one default library at the workspace root when entering subdirectories. Show actual entries without routine cross-workspace caveats; report concrete path, read or JSON errors instead.
+- Create the library only after explicit save confirmation, and read it back to verify writes and retained entries. Templates no longer suggest creating the file during installation.
+- No schema migration, new runtime dependency or automatic publishing. This is an early-feedback pre-release. Nine fictional dialogue responses and eight isolated file-operation examples were reviewed in one new reviewer thread; all inputs were visible and file actions were orchestrated by case ID. See the [validation summary](tests/20261116_呈现与观点库验收.md). This does not establish automatic intent recognition or cross-model equivalence.
+
 ## v0.1.3 — Consensus views MVP (2026-11-06)
 
-Optional, document-first consensus library. Counterexample, fact-checking, and disagreement rules from v0.1.2 are unchanged. No new runtime dependency, telemetry, or automatic outbound action. An installed v0.1.2 copy does not upgrade by itself; review the skill and create your own `views/consensus.json` before using the library.
+Optional, document-first consensus library. Counterexample, fact-checking, and disagreement rules from v0.1.2 are unchanged. No new runtime dependency, telemetry, or automatic outbound action. An installed v0.1.2 copy does not upgrade by itself. Creation timing clarified in v0.1.4: review the skill first; create `views/consensus.json` only after the first explicit save confirmation, not as an installation prerequisite.
 
 ### Added
 
